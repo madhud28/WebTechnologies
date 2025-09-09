@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PetHub</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #2a9d8f;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 2px;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.8rem;
+    }
+    .nav-links a {
+      color: #e9f1f1;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.3rem 0.5rem;
+      transition: background 0.3s ease, color 0.3s;
+      border-radius: 5px;
+    }
+    .nav-links a:hover {
+      background: #264653;
+      color: #f4f4f4;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(rgba(42,157,143,0.75), rgba(42,157,143,0.75)), 
+                  url('https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?auto=format&fit=crop&w=1600&q=80') 
+                  no-repeat center center/cover;
+      height: 85vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fefefe;
+      padding: 0 1rem;
+    }
+    .hero-content {
+      max-width: 700px;
+    }
+    .hero h1 {
+      font-size: 3.8rem;
+      margin-bottom: 1rem;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+    .btn {
+      background: #e76f51;
+      color: #fff;
+      padding: 0.85rem 3rem;
+      border-radius: 40px;
+      font-size: 1.15rem;
+      font-weight: 700;
+      box-shadow: 0 5px 15px rgba(231,111,81,0.5);
+      transition: background 0.3s ease, box-shadow 0.3s;
+    }
+    .btn:hover {
+      background: #d6553d;
+      box-shadow: 0 8px 25px rgba(214,85,61,0.7);
+    }
+
+    /* Services Section */
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 4rem 2rem;
+      background: #ffffff;
+    }
+    .card {
+      background: #ffffff;
+      width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 1rem 0 0.5rem;
+      color: #2a9d8f;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    .card p {
+      padding: 0 1rem 1.2rem;
+      font-size: 1rem;
+      color: #666;
+    }
+
+    /* Footer */
+    footer {
+      background: #264653;
+      text-align: center;
+      color: #f1faee;
+      padding: 2rem 1rem;
+    }
+    footer .social {
+      margin-bottom: 1rem;
+    }
+    footer ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.8rem;
+      padding: 0;
+    }
+    footer ul li a {
+      font-size: 1.3rem;
+      color: #e76f51;
+      font-weight: 700;
+      transition: color 0.3s ease;
+    }
+    footer ul li a:hover {
+      color: #f4a261;
+    }
+    footer .copyright {
+      margin-top: 1rem;
+      font-weight: 600;
+      opacity: 0.75;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 650px) {
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">PetHub</a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Eat, Sleep, Cuddle, Repeat</h1>
+      <p>
+        We promise to make your dog healthy, fit, and well trained.
+        We prioritize transparency, trust, and excellence to give you complete confidence in the choices you make for your pet.
+      </p>
+      <a href="#" class="btn">Explore Services</a>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="card">
+      <img src="https://i.pinimg.com/564x/79/c3/dc/79c3dc3584aef3d084816e7104e1b9ce.jpg" alt="Grooming" />
+      <h3>Grooming</h3>
+      <p>Personal hygiene, hair care, and expert grooming to keep your pet looking fresh.</p>
+    </div>
+    <div class="card">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/008/951/892/small_2x/cute-puppy-pomeranian-mixed-breed-pekingese-dog-run-on-the-grass-with-happiness-photo.jpg" alt="DayCare" />
+      <h3>DayCare</h3>
+      <p>Safe and fun center-based or home-based daycare options to suit your pet’s needs.</p>
+    </div>
+    <div class="card">
+      <img src="https://www.thesprucepets.com/thmb/5AHmVma0GzvDIzKBmlM6KkAiKJI=/1500x0/filters:no_upscale():strip_icc()/GettyImages-713836977-4c8c6364003c4efcbed4f562288dbc1c.jpg" alt="Training" />
+      <h3>Training</h3>
+      <p>Obedience and socialization training designed to bring out the best in your furry friend.</p>
+    </div>
+    <div class="card">
+      <img src="https://legendary-digital-network-assets.s3.amazonaws.com/wp-content/uploads/2019/09/13084837/dog-scan-1.jpg" alt="Walking" />
+      <h3>Walking</h3>
+      <p>Daily walks and fun outdoor activities promoting health and happiness.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="social">
+      <ul>
+        <li><a href="#" class="twitter">Twitter</a></li>
+        <li><a href="#" class="facebook">Facebook</a></li>
+        <li><a href="#" class="instagram">Instagram</a></li>
+        <li><a href="#" class="pinterest">Pinterest</a></li>
+      </ul>
+    </div>
+    <div class="copyright">&copy; 2025 PetHub</div>
+  </footer>
+</body>
+</html>
